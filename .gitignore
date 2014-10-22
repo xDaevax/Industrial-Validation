@@ -1,0 +1,6 @@
+desktop.ini
+thumbs.db
+.eprj
+perf/*
+node_modules
+dist
