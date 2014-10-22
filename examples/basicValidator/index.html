@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Validator</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <script type="text/javascript" src="scripts/jquery.js"></script>
+  <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+  <script type="text/javascript" src="scripts/knockout.js"></script>
+  <script type="text/javascript" src="scripts/industrial-validation.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript">
+  var model = new FormViewModel();
+  $(function() {
+    ko.applyBindings(model);
+  });
+  </script>
+</head>
+<body>
+  <div class="liner">
+    <div class="spacer"></div>
+    <header data-bind="animator: IsValid() ? 'Valid' : 'Invalid'">
+      <div class="validation-summary">
+        <h4>Form Status:</h4><mark data-bind="text: IsValid() ? 'Valid' : 'Invalid'"></mark>
+      </div>
+    </header>
+    <section class="main">
+      <form name="validation-form" id="validation-form" method="post" action="">
+        <div class="form-liner">
+          <h5>Validation Testing</h5>
+          <span class="form-item">
+            <label for="first-name">First Name:<mark data-bind="text: FirstName.State.Indicator, visible: FirstName.State.ShowIndicator"></mark></label>
+            <input type="text" name="first-name" id="first-name" data-bind="textInput: FirstName, click: function() {$(document).trigger('data-click', {EventData: $data.FirstName(), Source: $(this)})}" maxlength="100" tabindex="1" />
+            <span class="validation-error" data-bind="text: FirstName.State.ValidationMessage"></span>
+          </span>
+          <span class="form-item">
+            <label for="last-name">Last Name:<mark data-bind="text: LastName.State.Indicator, visible: LastName.State.ShowIndicator"></mark></label>
+            <input type="text" name="last-name" id="last-name" data-bind="textInput: LastName" maxlength="100" tabindex="2" />
+          </span>
+        </div>
+      </form>
+    </section>
+    <footer>
+    </footer>
+  </div>
+</body>
+</html>
