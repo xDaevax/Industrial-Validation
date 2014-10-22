@@ -1,0 +1,90 @@
+HTML {
+  height: 100%;
+  overflow: hidden;
+}
+BODY {
+  margin: 0px;
+  padding: 0px;
+  font-size: small;
+  font-family: Verdana, Arial, Sans-Serif;
+  color: #121212;
+  background-color: rgb(112, 56, 10);
+  line-height: auto;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+HEADER {
+  margin: 50px auto 4px auto;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  border: solid 1px #898989;
+  border-radius: 3px;
+  padding: 3px;
+}
+H1, H2, H3, H4, H5 {
+  margin: 0px;
+  display: inline-block;
+}
+MARK {
+  background-color: transparent;
+  display: inline-block;
+  margin: 1px 2px;
+}
+.spacer {
+  padding: 1px;
+}
+
+.liner {
+  display: block;
+  width: 80%;
+  max-width: 1024px;
+  min-width: 800px;
+  border-left: solid 1px #232323;
+  border-right: solid 1px #232323;
+  height: 100%;
+  margin: 0px auto;
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, .5);
+  background-color: #efefef;
+  padding: 0px 3px;
+}
+.main {
+  display: block;
+  width: auto;
+  text-align: center;
+}
+.form-liner {
+  margin: 0px auto;
+  border: inset 1px #ababab;
+  padding: 3px;
+  border-radius: 3px;
+  width: 60%;
+  text-align: left;
+}
+.form-liner H5 {
+  display: block;
+  text-align: center;
+  width: 50%;
+  margin: -4px auto 10px auto;
+  border: solid 1px #000000;
+  border-radius: 0px 0px 4px 4px;
+  background-color: rgb(188, 125, 73);
+  color: #ffffff;
+  padding: 3px;
+}
+.form-liner .form-item {
+  display: block;
+}
+HEADER.invalid {
+  border: solid 1px #ff0000;
+  background-color: rgba(255, 165, 165, .8);
+}
+HEADER.valid {
+  border: solid 1px #00ff00;
+  background-color: rgba(165, 255, 165, .8);
+}
+.form-item LABEL MARK {
+  display: inline-block;
+  width: 10px;
+}
